@@ -140,7 +140,7 @@ class DataConnector:
 
     def fetchData(self, req):
         if(req["type"]=='inline'):
-            return req["data"]
+            return json.loads(req["data"])
         else:
             return self.fetch(req["location"],req["store"])
 
