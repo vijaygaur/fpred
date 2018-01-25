@@ -155,7 +155,7 @@ def main():
         elif (action == "validate"):
             validate(trainId, validationId, model, data)
         elif (action == "predict"):
-            predict(trainId, data)
+            sys.stdout.write(predict(trainId, data))
 
 if __name__ == "__main__":
     print(sys.argv)
